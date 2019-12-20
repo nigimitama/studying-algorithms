@@ -14,3 +14,5 @@ for x, v in xv:
         posision = x
     print(profit,profit_i, v, min(cost_r,  cost_l))
 print(profit)
+
+# WA
