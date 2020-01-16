@@ -19,7 +19,9 @@ int func(string N) {
 
 int main() {
     string N;
-    if (stoi(N) % func(N) == 0) {
+    cin >> N;
+    int A = stoi(N) % func(N);
+    if (A == 0) {
         cout << "Yes" << endl;
     } else {
         cout << "No" << endl;
