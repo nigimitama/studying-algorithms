@@ -1,5 +1,5 @@
-n,v = map(int, input().split())
-tp =  [list(map(int, input().split())) for _ in range(n)]
+n, v = map(int, input().split())
+tp = [list(map(int, input().split())) for _ in range(n)]
 
 is_out = False
 for i in range(n):
