@@ -10,4 +10,3 @@ for r_i in r:
 
 if len(ok) == 0:
     print("none")
-    
