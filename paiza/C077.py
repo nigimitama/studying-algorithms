@@ -1,7 +1,6 @@
 k, n = map(int, input().split())
 da = [list(map(int, input().split())) for _ in range(k)]
 
-
 def evaluate(a):
     if a >= 80:
         print("A")
