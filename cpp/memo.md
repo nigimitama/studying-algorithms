@@ -39,3 +39,31 @@ int main() {
 }
 ```
 
+# collection
+
+## 連想配列（map）
+http://vivi.dyndns.org/tech/cpp/map.html
+
+> map は C++標準ライブラリに含まれており、「#include <map>」を記述することで利用可能になる。
+
+> 名前空間は「std」なので、使用の度に「std::」を前置するか、または「using namespace std;」を記述しておく。
+
+```cpp
+#include <map>       // ヘッダファイルインクルード
+int main()
+{
+    std::map<std::string, int> mp;       // ローカル変数として、mp を生成
+    .....
+}
+```
+
+```cpp
+#include <map>       // ヘッダファイルインクルード
+using namespace std;         //  名前空間指定
+int main()
+{
+    map<string, int> mp;       // ローカル変数として、mp を生成
+    .....
+}
+```
+
