@@ -1,3 +1,4 @@
+# 選択ソート（selection sort）
 
 def minimize(a: list):
     """最小値を探すアルゴリズム
@@ -50,7 +51,6 @@ def selection_sort2(a: list):
                     a[a.index(target[j])] = a[i]
                     a[i] = target[j]
     return a
-
 
 
 if __name__ == "__main__":

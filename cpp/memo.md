@@ -6,14 +6,11 @@
 
 [B - 1.01.出力とコメント](https://atcoder.jp/contests/apg4b/tasks/APG4b_b)
 
-これ
 
 ```cpp
 #include <bits/stdc++.h>
 using namespace std;
 ```
-
-
 
 ### #include <bits/stdc++.h>
 
@@ -25,7 +22,6 @@ using namespace std;
 ### using namespace std;
 
 `using namespace std;`はプログラムを短く書くための機能です。`#include`で読み込んだC++の機能を利用するためには、通常は`std::cout`や`std::endl`のように`std::`をはじめに付ける必要があります。 `using namespace std;`を利用すると、この`std::`を省略して書くことができます。
-
 
 
 ## 標準出力
@@ -50,20 +46,13 @@ http://vivi.dyndns.org/tech/cpp/map.html
 
 ```cpp
 #include <map>       // ヘッダファイルインクルード
-int main()
-{
-    std::map<std::string, int> mp;       // ローカル変数として、mp を生成
-    .....
-}
-```
-
-```cpp
-#include <map>       // ヘッダファイルインクルード
 using namespace std;         //  名前空間指定
 int main()
 {
-    map<string, int> mp;       // ローカル変数として、mp を生成
-    .....
+  // map<キー型, 値型> オブジェクト名;　と宣言する
+    map<string, int> mp;       // 変数mp を生成　（文字列 → 整数の連想配列）
+    mp["a"] = 1;
+    cout << mp["a"] << endl;  // 値の取得
 }
 ```
 

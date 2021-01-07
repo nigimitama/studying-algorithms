@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include <map>
 using namespace std;
 
 
@@ -12,14 +13,13 @@ int max(vector<int> v) {
     return max_v;
 }
 
-vector<int> count(vector<int> v) {
-    vector<int> counts(max(v));
+map<int, int> count(vector<int> v) {
+    map<int, int> counts;
     for (int i = 0; i < v.size(); i++) {
-        counts(v.at(i)) += 1;
+        counts[v.at(i)] += 1;
     }
     return counts;
 }
-// WIP/FIXME: エラー解決できず
 
 
 string detect(string cards) {
@@ -35,6 +35,7 @@ string detect(string cards) {
     } else if (max_counts == 3) {
         return "Three Card";
     } else if (max_counts == 2) {
+        // TODO: count pair
         return "Two Pair";
     } else if (max_counts == 2) {
         return "One Pair";
@@ -44,11 +45,16 @@ string detect(string cards) {
 }
 
 int main() {
-    int n;
-    cin >> n;
-    string cards;
-    for (int i=0; i<n; i++) {
-        cin >> cards;
-        cout << detect(cards) << endl;
+    vector<int> v = {2,3,4};
+    map<int, int> c = count(v);
+    for (int i=0; i<c.size(); i++) {
+        cout << c.at(i) << endl;
     }
+    // int n;
+    // cin >> n;
+    // string cards;
+    // for (int i=0; i<n; i++) {
+    //     cin >> cards;
+    //     cout << detect(cards) << endl;
+    // }
 }
