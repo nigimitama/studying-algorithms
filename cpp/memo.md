@@ -35,6 +35,24 @@ int main() {
 }
 ```
 
+# 関数
+
+## sort
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    vector<int> v = {1, 5, 2, 3, 4};
+    // std::sortでは、greater<int>を利用することで降順にソートできる
+    sort(v.begin(), v.end(), greater<int>());
+    for (int i=0; i < v.size(); i++) {
+        cout << v.at(i) << endl;
+    }
+}
+```
+
+
 # collection
 
 ## 連想配列（map）
