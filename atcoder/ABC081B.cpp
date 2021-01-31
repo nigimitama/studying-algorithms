@@ -18,20 +18,17 @@ bool is_all_even(vector<int> A) {
  
 int main() {
     int N;
+    cin >> N;
     vector<int> A(N);
     for (int i = 0; i < N; i++) {
         cin >> A.at(i);
     }
-    for (int i = 0; i < N; i++) {
-        cout << A.at(i) << endl;
+    int count = 0;
+    while (is_all_even(A)) {
+        for (int i = 0; i < N; i++) {
+            A.at(i) /= 2;
+        }
+        count += 1;
     }
-    // int N = 3;
-    // vector<int> A = { 8 , 12, 40 };
-    // int count = 0;
-    // while (is_all_even(A)) {
-    //     for (int i = 0; i < N; i++) {
-    //         A.at(i) /= 2;
-    //     }
-    // }
-    // cout << count << endl;
+    cout << count << endl;
 }
